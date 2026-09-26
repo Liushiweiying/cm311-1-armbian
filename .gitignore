@@ -1,0 +1,26 @@
+# 大体积二进制 / 镜像 —— 不进仓库
+images/
+*.img
+*.img.gz
+*.zip
+*.7z
+*.rar
+
+# 下载的工具
+tools/
+*.exe
+*.msi
+
+# 个人实测记录（含本机路径、串口日志、截图）
+notes/
+ttl-boot-log.txt
+power-polarity.txt
+*-about.png
+
+# 系统 / 编辑器杂物
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
