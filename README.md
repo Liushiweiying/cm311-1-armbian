@@ -1,4 +1,4 @@
-文章框架由ai生成，由笔者重写。
+文章框架由ai生成，由笔者重写。包含一部分从社区获得的经验与笔者的实战经历。
 
 
 ## 起因
@@ -135,7 +135,7 @@ find / -uid 1023 2>/dev/null | wc -l
 # → 58448
 ```
 
-**五万八千个文件的属主错误**
+**属主错误**
 
 原因是：**在安卓运行时插着 U 盘，然后从 U 盘引导**，文件属主继承了错误的 uid。
 
@@ -147,7 +147,7 @@ chown -R root:root /etc /usr /var /opt /srv /root
 
 改完重启，`systemctl --failed` 显示 0 个失败单元。
 
-## 第四步：SSD 与存储
+## 第四步：SSD 与存储(需要加Nofail)
 
 一块 120GB 的 SATA SSD 装在 JMicron JMS578 芯片的硬盘盒（联想Thinkplus）里。
 
@@ -202,7 +202,7 @@ NoNewPrivileges=yes
 RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
 ```
 
-### 第五个坑：`InaccessiblePaths` 会启动失败
+### `InaccessiblePaths` 会启动失败
 
 本来还想加一条 `InaccessiblePaths=/mnt/ssd/nas`，结果服务起不来：
 
