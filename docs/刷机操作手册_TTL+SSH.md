@@ -105,7 +105,7 @@ Windows 串口工具可选：PuTTY（Serial）、MobaXterm、SecureCRT、Tera Te
 
 ### 2.5 记录
 
-把完整日志存到 `E:\CM311-1\notes\ttl-boot-log.txt`，
+把完整日志存到一个你自己记录用的目录（例如 `notes\ttl-boot-log.txt`），
 并在 `notes\README.txt` 里记下：平台 = gxl / 芯片 = L3 或 L3B。
 
 ### 2.6 附加验证（不用拆机）
@@ -187,7 +187,7 @@ printenv
 **路线 A：ADB 触发（省事，但看不见）**
 
 ```powershell
-cd E:\CM311-1\tools\platform-tools
+cd <platform-tools 所在目录>
 .\adb.exe connect <盒子IP>:5555
 .\adb.exe devices              # 确认连上
 ```
